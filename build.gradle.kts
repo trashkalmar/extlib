@@ -24,7 +24,7 @@ publishing {
     create<MavenPublication>("maven") {
       groupId = "com.pocketimps"
       artifactId = "extlib"
-      version = "1.0.0"
+      version = "1.0.1"
 
       from(components["kotlin"])
     }

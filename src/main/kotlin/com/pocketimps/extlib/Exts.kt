@@ -6,11 +6,6 @@ import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
 
-typealias Proc = () -> Unit
-typealias BoolProc = (result: Boolean) -> Unit
-
-inline fun <T> uiLazy(noinline initializer: () -> T) = lazy(LazyThreadSafetyMode.NONE, initializer)
-
 inline fun Boolean.alsoIfTrue(proc: Proc) = apply {
   if (this)
     proc.invoke()
